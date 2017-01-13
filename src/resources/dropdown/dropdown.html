@@ -1,0 +1,8 @@
+<template>
+    <div class="form group">
+        <select value.bind="selectedValue" class="form-control">
+            <option value="" disabled selected>${placeholdertext}</option>
+            <option repeat.for="opt of options" value.bind="opt.value">${opt.label}</option>
+        </select>
+    </div>
+</template>

@@ -1,0 +1,27 @@
+<template bindable="router">
+	<div class="mdl-layout mdl-js-layout">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<div mdl-layout-icon></div>
+				<div class="mdl-logo">
+					<img style="height:60px" src="https://www.ezlinksgolf.com/images/default/logo.png" alt="EZLinks logo">
+				</div>
+				<div class="nav-title">
+					<span class="mdl-layout-title">${router.title} | ${router.currentInstruction.config.title}</span>
+				</div>
+				<div class="mdl-layout-spacer"></div>
+				<nav class="mdl-navigation mdl-layout--large-screen-only">
+					<a class="mdl-navigation__link" repeat.for="row of router.navigation" href.bind="row.href">${row.title}</a>
+				</nav>
+			</div>
+		</header>
+
+		<div class="mdl-layout__drawer">
+			<nav class="mdl-navigation">
+				<a class="mdl-navigation__link" repeat.for="row of router.navigation" href.bind="row.href">${row.title}</a>
+			</nav>
+		</div>
+		<!-- the div below is for the pop-out nav menu -->
+
+	</div>
+</template>
